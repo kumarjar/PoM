@@ -96,7 +96,7 @@ namespace SpecFlowProjectEx.Steps
         [Then(@"I should verify the patient details as '(.*)'")]
         public void ThenIShouldVerifyThePatientDetailsAs(string p0)
         {
-            ScenarioContext.Current.Pending();
+            
         }
     }
 }
