@@ -8,6 +8,8 @@ using WebDriverManager;
 using WebDriverManager.DriverConfigs.Impl;
 using SpecFlowProjectEx.Hooks;
 using SpecFlowProjectEx.Pages;
+using System.Threading;
+//[assembly: Parallelizable(ParallelScope.Self)]
 
 namespace SpecFlowProjectEx.Steps
 {
@@ -31,11 +33,13 @@ namespace SpecFlowProjectEx.Steps
             _mainPage = new MainPage(_hooks.driver);
         }
 
+        
         [Given(@"I have browser with OpenMr Page")]
         public void GivenIHaveBrowserWithOpenMrPage()
         {
-            _hooks.LaunchBrowser();
+           // _hooks.LaunchBrowser();
             InitializePage();
+            Thread.Sleep(800);
         }
         
         [When(@"I enter username as '(.*)'")]

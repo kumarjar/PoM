@@ -17,7 +17,7 @@ Given I have browser with OpenMr Page
 	And I click on add new patient
 	And I fill the form
 	| firstname | middlename | lastname | dob | gender |
-	| John      | Kr         |wick     | 2022-01-11 | male   |
+	| Johns      | Kr         |wicks     | 2022-01-12 | male   |
 	And I click on create new patient
 	And I click on confirm create new patient
 	And I store alert text and handle it

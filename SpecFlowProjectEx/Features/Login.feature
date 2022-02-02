@@ -1,13 +1,16 @@
-﻿Feature: Login
+﻿	@Variant:Chrome
+	@Variant:IE
+Feature: Login
 	In order to manage the hospital records
 	As a portal user
 	I would like to access OpenMr dashboard
 
-Background: 
-    Given I have browser with OpenMr Page
+#Background: 
+  #  Given I have browser with OpenMr Page
+
 
 Scenario Outline: Valid Credential
-	#Given I have browser with OpenMr Page
+	Given I have browser with OpenMr Page
 	When I enter username as '<username>'
 	And  I enter password as '<password>'
 	And  I select language as '<language>'
@@ -21,7 +24,7 @@ Scenario Outline: Valid Credential
 
 
 Scenario: InValid Credential
-	#Given I have browser with OpenMr Page
+	Given I have browser with OpenMr Page
 	When I enter username as 'admin'
 	And  I enter password as 'pass123'
 	And  I select language as 'English (Indian)'
